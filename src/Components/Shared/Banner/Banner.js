@@ -16,8 +16,8 @@ const Banner = () => {
                     <Carousel.Caption style={{ position:" absolute", top:"300px"}}>
                     <h3 style={{fontSize:"70px"}}> Healthy Life <br/>
                     <span>Happy Life</span></h3>
-                    <p>We Are Always Ready To Help You</p>
-                    <Link className="text-decoration-none p-3 btn-danger fw-bolder rounded" to='/*'>Know More</Link>
+                    <p className="mb-4 mt-3">We Are Always Ready To Help You</p>
+                    <Link to='*' className="text-decoration-none p-3 btn-danger fw-bolder rounded" >Know More</Link>
                     </Carousel.Caption>
                 </Carousel.Item>
                 

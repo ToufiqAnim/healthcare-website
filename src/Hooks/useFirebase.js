@@ -6,44 +6,7 @@ initilizeAuthentication();
 const googleProvider = new GoogleAuthProvider();
 
 const useFirebase = () =>{
-    /* const [user,setUser] = useState({});
-    const [email, setEmail] = useState('')
-    const [password, setPassword] = useState('')
-    const auth = getAuth();
-    const googleProvider = new GoogleAuthProvider();
-    const signInUsingGogle = ()=>{
-        signInWithPopup(auth,googleProvider)
-        .then(result =>{
-            console.log(result.user);
-        })
-    }
-    const signInUsingEmail = () =>{
-        createUserWithEmailAndPassword(auth, email, password)
-        .then(result =>{
-            console.log(result.user)
-        })
-    }
-    const logOut = () =>{
-        signOut(auth)
-        .then(()=>{
-            setUser({});
-        })
-    }
-    useEffect(()=>{
-        onAuthStateChanged(auth, user =>{
-            if (user){
-                setUser(user);
-            }
-        });
-    },[])
-
     
-    return{
-        user,
-        signInUsingGogle,
-        signInUsingEmail,
-        logOut
-    } */
 
   const [user,setUser] = useState({});
   const [name,setName]=useState('');

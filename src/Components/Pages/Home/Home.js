@@ -37,6 +37,7 @@ const Home = () => {
 
             <div className="mt-5">
            <Container>
+               <h1 className="text-center text-info text-bold mb-4">Members</h1>
                    <Row>
                        <Col style={{boxShadow:"rgba(99, 99, 99, 0.2) 0px 2px 8px 0px"}}  xs={12} sm={4}>
 

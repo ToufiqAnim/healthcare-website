@@ -1,10 +1,11 @@
 import React from 'react';
 import { Link,useLocation,useHistory } from 'react-router-dom';
 import useAuth from '../../Hooks/useAuth';
-
+import { FcGoogle } from "react-icons/fc";
 
 
 import './Contact.css'
+import { Col, Container, Row } from 'react-bootstrap';
 const Contact = () => {
 
     const { handleRegistration,isLogin,handleEmailChange,handleNameChange,handlePasswordChange,toggleLogin,error,handleGoogleSignIn,resetPassBtn}= useAuth();
@@ -17,19 +18,22 @@ const Contact = () => {
   const signInUsingGoogle = ()=>{
     handleGoogleSignIn()
     .then(result =>{
-      window.location.reload();
+      
 
         history.push(redirect_uri);
+       
     })
   }
 
     return (
-        <div className='login-form'>
- 
+        <div>
+            <Container style={{marginRight:"100px"}}>
+              <Row>
+                <Col sm={12} md={6}>
 
-            <div className=" App container mt-5" style={{width:"500px"}}>
+                <div className=" 'login-form'   mt-5" >
       <form onSubmit={handleRegistration}>
-        <h3 className="text-primary text-center mt-5 pt-5 mb-4">Please {isLogin ? 'Login' : 'Register'}</h3>
+        <h3 className="text-info text-center mt-5 pt-5 mb-4">Please {isLogin ? 'Login' : 'Register'}</h3>
       
         
 
@@ -82,15 +86,21 @@ const Contact = () => {
         </button>
         <br />
 
-        {isLogin && <Link onClick={resetPassBtn}  className="mb-4 text-danger " style={{textDecoration:"none" , marginLeft:"120px"}} > Forgot Your Password? <span className="text-success"> Reset Now</span> </Link>}
+        {isLogin && <Link to="#" onClick={resetPassBtn}  className="mb-4 text-danger " style={{textDecoration:"none" , marginLeft:"120px"}} > Forgot Your Password? <span className="text-success"> Reset Now</span> </Link>}
 
+        <div className="text-center mt-4 fw-bold">Or</div>
 
+        <button className=" p-2 px-3 fw-600 border-1 fs-4 rounded-3" style={{marginLeft:"90px", marginTop:"20px", marginBottom:"90px"}} onClick={signInUsingGoogle}> Sign In Using Google <FcGoogle className="fs-1"/></button>
       </form>
-      <br /><br /><br />
-      <div>--------------------------------</div>
-      <br /><br /><br />
-      <button onClick={signInUsingGoogle}>Google Sign In</button>
+      
+      
     </div>
+
+                </Col>
+              </Row>
+            </Container>
+
+            
 
         </div>
     );

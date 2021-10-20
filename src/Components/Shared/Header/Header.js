@@ -18,10 +18,12 @@ const Header = () => {
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav className="me-auto" style={{marginLeft:"50%"}}>
+                    <Nav className="me-auto" style={{marginLeft:"25%"}}>
                         <Nav.Link as={Link} to="/home" className="fs-5 text-dark pe-3">Home</Nav.Link>
                         <Nav.Link as={Link} to="/services" className="fs-5 text-dark pe-3">Services</Nav.Link>
+                        <Nav.Link as={Link} to="/department" className="fs-5 text-dark pe-3">Department</Nav.Link>
                         <Nav.Link as={Link} to="/about" className="fs-5 text-dark  pe-3">About</Nav.Link>
+                        <Nav.Link as={Link} to="/offers" className="fs-5 text-dark  pe-3">Special Offers</Nav.Link>
                         
 
                        {user.email ? 

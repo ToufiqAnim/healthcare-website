@@ -7,7 +7,7 @@ import './SingleService.css';
 const SingleService = () => {
 
     const {id} = useParams()
-    //   const {name,image,about,id} = props.service;
+    
        const [serviceDetails, setServiceDetails] = useState([]);
        const [singleService, setSingleService] = useState({})
 

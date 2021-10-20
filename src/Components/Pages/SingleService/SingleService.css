@@ -16,5 +16,11 @@
 }
 .single-service img{
     width: 800px;
+    padding:10px;
 
+}
+@media screen and (max-width:1024px) {
+    .single-service{
+        grid-template-columns: repeat(1,1fr);
+    }
 }
