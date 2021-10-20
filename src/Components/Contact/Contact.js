@@ -1,35 +1,35 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link,useLocation,useHistory } from 'react-router-dom';
 import useAuth from '../../Hooks/useAuth';
 
 
 
 import './Contact.css'
 const Contact = () => {
-    const {signInUsingGogle,signInUsingEmail, handleRegistration,isLogin,handleEmailChange,handleNameChange,handlePasswordChange,toggleLogin,error,handleGoogleSignIn,resetPassBtn}= useAuth();
-       
+
+    const { handleRegistration,isLogin,handleEmailChange,handleNameChange,handlePasswordChange,toggleLogin,error,handleGoogleSignIn,resetPassBtn}= useAuth();
+    
+    const history = useHistory();
+    const location = useLocation();
+
+    const redirect_uri = location.state?.from || '/home';
+
+  const signInUsingGoogle = ()=>{
+    handleGoogleSignIn()
+    .then(result =>{
+      window.location.reload();
+
+        history.push(redirect_uri);
+    })
+  }
+
     return (
         <div className='login-form'>
-            {/* <div>
-                <h2 className='login-text'>Login</h2>
-                <form >
-                    <input className="email" type="email" placeholder="Enter Your Email" />
-                    <br />
-                    <input className="email"  type="password" name="" id="" placeholder='Enter Your Password' autoComplete='on'/>
-                    <br />
-                    <input onClick={signInUsingEmail} className="email" type="submit" />
-                </form>
-                <p className="text">New to Ema-John ?<Link style={{margin:"10px"}} to="/register">Create Account</Link></p>
-                <div className="or">-----or-----</div>
-                <button 
-                 style={{margin:"10px"}}
-                onClick={signInUsingGogle}
-                 >Google Sign In</button>
-            </div>  */}
+ 
 
-            <div className=" App container mt-5" style={{width:"350px"}}>
+            <div className=" App container mt-5" style={{width:"500px"}}>
       <form onSubmit={handleRegistration}>
-        <h3 className="text-primary text-center mb-4">Please {isLogin ? 'Login' : 'Register'}</h3>
+        <h3 className="text-primary text-center mt-5 pt-5 mb-4">Please {isLogin ? 'Login' : 'Register'}</h3>
       
         
 
@@ -38,7 +38,7 @@ const Contact = () => {
           <label htmlFor="inputName" className="col-sm-2 col-form-label mb-3 fw-bold">Name</label>
           <div className="col-sm-10">
 
-            <input onBlur={handleNameChange} type="text" className="form-control border-0 p-3" id="inputEmail3" placeholder="Enter Your Name" style={{backgroundColor:"#eee"}} required />
+            <input onBlur={handleNameChange} type="text" className="form-control border-0 p-3" id="inputName" placeholder="Enter Your Name" style={{backgroundColor:"#eee"}} required />
 
           </div>
          </div>
@@ -89,7 +89,7 @@ const Contact = () => {
       <br /><br /><br />
       <div>--------------------------------</div>
       <br /><br /><br />
-      <button onClick={handleGoogleSignIn}>Google Sign In</button>
+      <button onClick={signInUsingGoogle}>Google Sign In</button>
     </div>
 
         </div>
@@ -97,3 +97,5 @@ const Contact = () => {
 };
 
 export default Contact;
+
+

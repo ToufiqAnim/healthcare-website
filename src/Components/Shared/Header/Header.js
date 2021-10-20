@@ -10,10 +10,11 @@ const Header = () => {
         <div>
             
        
-             <Navbar expand="lg" className='m-0 p-0'  style={{lineHeight:"80px"}}>
+             <Navbar expand="lg" className='m-0 p-0'  style={{lineHeight:"80px", backgroundColor:"#eee"}}>
             <Container > 
-                <Navbar.Brand as={Link} to="/home" className="fs-1 fw-bold text-primary">
-                     EduBuzz  
+                <Navbar.Brand as={Link} to="/home" className="fs-1 fw-bold text-info" >
+                <i class="fas fa-hospital-alt"></i>
+                     MediPlus 
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
@@ -27,7 +28,7 @@ const Header = () => {
                        
                        <Nav.Link as={Link} onClick={logOut} to="/contact" className="fs-3 fw-bold text-primary pe-3">LogOut</Nav.Link> 
                        
-                       :<Nav.Link as={Link} to="/contact" className="fs-3 fw-bold text-primary pe-3">LogIn</Nav.Link> 
+                       :<Nav.Link as={Link} to="/contact" className="fs-3 fw-bold text-info pe-3">LogIn</Nav.Link> 
                         }
                         <span className="pt-2">{user.displayName}</span>
                     </Nav>

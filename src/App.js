@@ -12,6 +12,8 @@ import Register from './Components/Contact/Register';
 import AuthProvider from './Contect/AuthProvider';
 import SingleService from './Components/Pages/SingleService/SingleService';
 import About from './Components/About/About';
+import NotFound from './Components/NotFound/NotFound';
+import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 
 
 
@@ -30,9 +32,9 @@ function App() {
             <Route exact path='/services'>
               <Services></Services>
             </Route>
-            <Route exact path='/services/:id'>
+            <PrivateRoute exact path='/services/:id'>
               <SingleService></SingleService>
-            </Route>
+            </PrivateRoute>
            
             <Route exact path='/contact'>
               <Contact></Contact>
@@ -43,9 +45,14 @@ function App() {
             <Route path='/register'>
               <Register></Register>
             </Route>
+            <Route path="*">
+              <NotFound></NotFound>
+            </Route>
             <Route path='/'>
               <Home></Home>
             </Route>
+
+          
           </Switch>
           <Footer></Footer>
         </BrowserRouter>

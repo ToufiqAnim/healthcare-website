@@ -1,6 +1,7 @@
 import React from 'react';
 import { Carousel } from 'react-bootstrap';
-import image1 from '../../image/image1.jpg'
+import { Link } from 'react-router-dom';
+import image1 from '../../image/BGImg_@.jpg'
 
 const Banner = () => {
     return (
@@ -8,25 +9,18 @@ const Banner = () => {
             <Carousel className="mb-5">
                 <Carousel.Item>
                     <img
-                    style={{height:'800px'}}
-                    className="d-block w-100"
+                    style={{height:"900px"}}
+                    className="d-block w-100 img-fluid"
                      src={image1} alt="" />
-                    <Carousel.Caption>
-                    <h3>First slide label</h3>
-                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                     
+                    <Carousel.Caption style={{ position:" absolute", top:"300px"}}>
+                    <h3 style={{fontSize:"70px"}}> Healthy Life <br/>
+                    <span>Happy Life</span></h3>
+                    <p>We Are Always Ready To Help You</p>
+                    <Link className="text-decoration-none p-3 btn-danger fw-bolder rounded" to='/*'>Know More</Link>
                     </Carousel.Caption>
                 </Carousel.Item>
-                <Carousel.Item>
-                    <img
-                    style={{height:'800px'}}
-                    className="d-block w-100"
-                    src={image1} alt="" />
-
-                    <Carousel.Caption>
-                    <h3>Second slide label</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    </Carousel.Caption>
-                </Carousel.Item>
+                
                 
                 </Carousel>
         </div>
