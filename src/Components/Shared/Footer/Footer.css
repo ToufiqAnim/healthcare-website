@@ -1,0 +1,16 @@
+footer{
+    display: flex;
+    background-color: #0e1133;
+    margin-top: 1rem;
+    color: white;
+    
+    
+}
+ul li{
+    text-decoration: none;
+}
+
+.footerLink{
+    text-decoration: none;
+    color: white;
+}

@@ -1,0 +1,48 @@
+{
+	"allServices":[
+			{
+				"id":1,
+				"image":"https://2rdnmg1qbg403gumla1v9i2h-wpengine.netdna-ssl.com/wp-content/uploads/sites/3/2020/09/minimalInvasiveSurgery-071520-CC-770x553-1-650x428.jpg",
+				"name": "Heart Surgery",	
+				"about": "Open-heart surgery is any type of surgery where the chest is cut open and surgery is performed on the muscles, valves, or arteries of the heart.",
+				"Cost":"Starting From $2000"
+			},
+			{
+				"id":2,
+				"image": "https://video.cgtn.com/news/2021-07-17/China-completes-world-s-first-ischemia-free-heart-transplantation-11YbKuBcxHy/video/cc757a6c78b940659aea191e92ff3292/cc757a6c78b940659aea191e92ff3292.jpg",
+				"name":"Heart Transplant",
+				"about": "A heart transplant is a surgical procedure used to treat the most serious cases of heart disease. This is a treatment option for people who are in the end stages of heart failure",
+				"Cost":"Starting From $4000"
+			},
+			{
+				"id":3,
+				"image":"https://ichef.bbci.co.uk/news/976/cpsprodpb/2291/production/_110894880_gettyimages-1055182908.jpg",
+				"name":"Dental Services",
+				"about": "Dental surgery is a broad term that refers to a broad range of medical procedures that involves the gums and teeth. These include root canal",
+				"Cost":"Stating From $100"
+			},
+			
+			{
+				"id":4,
+				"image":"https://my.clevelandclinic.org/-/scassets/images/org/health/articles/14618-dialysis-153501889.jpg",
+				"name": "Dialysis",
+				"about": "Dialysis is a treatment that filters and purifies the blood using a machine. This helps keep your fluids and electrolytes in balance when the kidneys can't do their job.",
+				"Cost":"Stating From $200"
+			},
+			{
+				"id":5,
+				"image":"https://cdn1.vectorstock.com/i/1000x1000/39/70/eye-surgery-treatment-laser-surgery-lasik-vector-25413970.jpg",
+				"name": "Lasik Surgery",
+				"about": "During LASIK eye surgery, an eye surgeon creates a flap in the cornea (A) — the transparent, dome-shaped surface of the eye that accounts.",
+				"Cost":"Stating From $2000"
+			},
+			{
+				"id":6,
+				"image":"https://media.istockphoto.com/vectors/bronchoscopy-glyph-icon-airway-check-lung-cancer-risk-examination-vector-id1223273789?k=20&m=1223273789&s=612x612&w=0&h=p9Znmwl57fVRe3fFECRbahK0p_HEWR1rYZMWRYv813I=",
+				"name": "Bronchoscopy",
+				"about": "Bronchoscopy is a procedure to look directly at the airways in the lungs using a thin, lighted tube. The bronchoscope is put in the nose or mouth.",
+				"Cost":"Staring From $120"
+			}
+]
+
+}
